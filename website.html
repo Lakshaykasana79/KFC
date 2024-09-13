@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+</head>
+<style>
+    body {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    #thin {
+        height: 3%;
+        width: 100%;
+        padding: 20px;
+        border-color: gray;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        text-align: center;
+        align-items: center;
+        position: fixed;
+        z-index: 1000;
+        background-color: white;
+    }
+
+    #location {
+        height: 20px;
+        width: 8%;
+        padding: 10px;
+        align-items: center;
+        position: absolute;
+        border-radius: 50px 50px 50px 50px;
+        background-color: black;
+        color: aliceblue;
+        text-align: center;
+        left: 65%;
+        bottom: 16%;
+    }
+
+    #logo {
+        height: 60%;
+        width: 3%;
+        align-items: center;
+        position: absolute;
+        left: 33%;
+        bottom: 20%;
+
+    }
+
+    #kfc {
+        height: 10.7%;
+        width: 100%;
+        padding: 20px;
+        background-color: rgb(242, 240, 240);
+        border-bottom-width: thin;
+        text-align: center;
+        align-items: center;
+        position: fixed;
+        z-index: 1000;
+        bottom: 73.3%;
+        display: inline-block;
+    }
+
+    #klogo {
+        height: 100%;
+        width: 14%;
+        align-items: center;
+        position: absolute;
+        left: 10%;
+        bottom: 0%;
+    }
+
+    #men {
+        height: 17%;
+        width: 7%;
+        align-items: center;
+        position: absolute;
+        left: 23%;
+        bottom: 44%;
+    }
+
+    #deals {
+        height: 17%;
+        width: 4%;
+        align-items: center;
+        position: absolute;
+        left: 30.5%;
+        bottom: 44%;
+    }
+
+    #aboutus{
+        height: 17%;
+        width: 14%;
+        align-items: center;
+        position: absolute;
+        left: 32%;
+        bottom: 44%;
+    }
+
+    #login {
+        height: 17%;
+        width: 14%;
+        align-items: center;
+        position: absolute;
+        display: flex;
+        left: 76%;
+        bottom: 44%;
+    }
+
+    #sign {
+        height: 130%;
+        width: 14%;
+        align-items: center;
+        left: 26%;
+        bottom: 66%;
+    }
+
+    #dd {
+        color: rgb(242, 240, 240);
+    }
+
+    #vl {
+        border-left: 2px solid black;
+        height: 25%;
+        position: absolute;
+        left: 84%;
+        bottom: 39.5%;
+    }
+
+    #bucket {
+        height: 17%;
+        width: 14%;
+        align-items: center;
+        position: absolute;
+        display: flex;
+        left: 85%;
+        bottom: 44%;
+    }
+
+    #log {
+        height: 21%;
+        width: 14%;
+        align-items: center;
+        left: 26%;
+        bottom: 56%;
+    }
+
+    #blac {
+        height: 50%;
+        margin: auto;
+        padding: 20px;
+        background-color: black;
+        color: aliceblue;
+        text-align: center;
+        align-items: center;
+    }
+
+    #oder {
+        height: 20px;
+        width: 8%;
+        padding: 10px;
+        border-radius: 50px 50px 50px 50px;
+        background-color: rgb(214, 21, 21);
+        color: aliceblue;
+        text-align: center;
+        position: absolute;
+        right: 23%;
+        top: 28.5%;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        /* Adjust width as needed */
+        height: 500px;
+        /* Adjust height as needed */
+        overflow: hidden;
+    }
+
+    #offer {
+        width: 100%;
+        height: 500px;
+        margin: auto;
+        text-align: center;
+        position: absolute;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Adjust opacity as needed */
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Show overlay on hover */
+    .container:hover .overlay {
+        opacity: 1;
+    }
+
+    /* Style for the overlay content */
+    .overlay-content {
+        text-align: center;
+    }
+
+    #bro {
+        height: 35px;
+        width: 30%;
+        padding: 10px;
+        position: absolute;
+        text-align: center;
+        font-family: monospace;
+        font-size: 30px;
+        left: 10%;
+    }
+
+    #bb {
+        border-bottom: 2px solid grey;
+        width: 44%;
+        background-color: white;
+        position: absolute;
+        left: 40%;
+        bottom: -38.8%;
+        display: block;
+    }
+
+    #peri {
+        height: 40%;
+        width: 18%;
+        position: absolute;
+        left: 10.8%;
+        border-radius: 50px 50px 50px 50px;
+        transition: transform 0.5s;
+    }
+    
+    #peri:hover {
+        transform: scale(1.1);
+    }
+
+    #snak {
+        height: 40%;
+        width: 18%;
+        position: absolute;
+        left: 30.8%;
+        border-radius: 50px 50px 50px 50px;
+        transition: transform 0.5s;
+    }
+
+    #snak:hover {
+        transform: scale(1.1);
+    }
+
+    #roll {
+        height: 40%;
+        width: 18%;
+        position: absolute;
+        left: 50.8%;
+        border-radius: 50px 50px 50px 50px;
+        transition: transform 0.5s;
+    }
+
+    #roll:hover {
+        transform: scale(1.1);
+    }
+
+    #cbuck {
+        height: 40%;
+        width: 18%;
+        position: absolute;
+        left: 70.8%;
+        border-radius: 50px 50px 50px 50px;
+        transition: transform 0.5s;
+    }
+
+    #cbuck:hover {
+        transform: scale(1.1);
+    }
+
+    #bbuck {
+        height: 40%;
+        width: 18%;
+        position: absolute;
+        left: 10.8%;
+        bottom: -140%;
+        border-radius: 50px 50px 50px 50px;
+        transition: transform 0.5s;
+    }
+
+    #bbuck:hover {
+        transform: scale(1.1);
+    }
+
+    #meal {
+        height: 40%;
+        width: 18%;
+        position: absolute;
+        left: 30.8%;
+        bottom: -140%;
+        border-radius: 50px 50px 50px 50px;
+        transition: transform 0.5s;
+    }
+
+    #meal:hover {
+        transform: scale(1.1);
+    }
+
+    #burg {
+        height: 40%;
+        width: 18%;
+        position: absolute;
+        left: 50.8%;
+        bottom: -140%;
+        border-radius: 50px 50px 50px 50px;
+        transition: transform 0.5s;
+    }
+
+    #burg:hover {
+        transform: scale(1.1);
+    }
+
+    #next {
+        height: 40%;
+        width: 18%;
+        position: absolute;
+        left: 70.8%;
+        bottom: -140%;
+        border-radius: 50px 50px 50px 50px;
+        transition: transform 0.5s;
+    }
+
+    #next:hover {
+        transform: scale(1.1);
+    }
+
+    #fg {
+        width: 100%;
+        height: 200%;
+        background-color: rgb(32, 31, 31);
+        position: absolute;
+        bottom: -350%;
+    }
+
+    #box {
+        width: 1.5%;
+        height: 5%;
+        background-color: rgb(214, 21, 21);
+        position: absolute;
+        left: 20%;
+    }
+
+    #box1 {
+        width: 1.5%;
+        height: 5%;
+        background-color: rgb(214, 21, 21);
+        position: absolute;
+        left: 23%;
+    }
+
+    #box2 {
+        width: 1.5%;
+        height: 5%;
+        background-color: rgb(214, 21, 21);
+        position: absolute;
+        left: 26%;
+    }
+
+    #outer {
+        background-color: transparent;
+        overflow: scroll;
+        width: 80%;
+        height: 54%;
+        position: absolute;
+        left: 20%;
+        bottom: 39%;
+    }
+
+    #zinger {
+        width: 28%;
+        height: 70%;
+        align-items: center;
+        position: absolute;
+        left: 0%;
+        bottom: 5%;
+        border-radius: 10px 10px 10px 10px;
+        background-color: white;
+    }
+
+    #zing1 {
+        width: 100%;
+        height: 75%;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    #zing2 {
+        width: 100%;
+        color: rgb(214, 21, 21);
+        text-align: center;
+        background-color: white;
+        font-size: 30px;
+        position: absolute;
+        top: 60%;
+    }
+
+    #zing3 {
+        width: 100%;
+        color: black;
+        background-color: white;
+        text-align: center;
+        position: absolute;
+        top: 70%;
+    }
+
+    #zing4 {
+        border: solid black;
+        height: 5%;
+        width: 35.5%;
+        position: absolute;
+        left: 27%;
+        bottom: 2.5%;
+        text-align: center;
+        color: black;
+        padding: 9px;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    #zing4:hover {
+        background-color: black;
+        color: white;
+    }
+
+    #upto {
+        width: 28%;
+        height: 70%;
+        align-items: center;
+        float: left;
+        position: absolute;
+        left: 34%;
+        bottom: 5%;
+        border-radius: 10px 10px 10px 10px;
+        background-color: white;
+    }
+
+    #mac {
+        width: 28%;
+        height: 70%;
+        align-items: center;
+        float: left;
+        position: absolute;
+        left: 68%;
+        bottom: 5%;
+        border-radius: 10px 10px 10px 10px;
+        background-color: white;
+    }
+
+    #don {
+        width: 28%;
+        height: 70%;
+        align-items: center;
+        float: left;
+        position: absolute;
+        left: 102%;
+        bottom: 5%;
+        border-radius: 10px 10px 10px 10px;
+        background-color: white;
+    }
+
+    #prc {
+        width: 28%;
+        height: 70%;
+        align-items: center;
+        float: left;
+        position: absolute;
+        left: 136%;
+        bottom: 5%;
+        border-radius: 10px 10px 10px 10px;
+        background-color: white;
+    }
+
+    #tme {
+        width: 28%;
+        height: 70%;
+        align-items: center;
+        float: left;
+        position: absolute;
+        left: 170%;
+        bottom: 5%;
+        border-radius: 10px 10px 10px 10px;
+        background-color: white;
+    }
+
+    #beig {
+        width: 28%;
+        height: 70%;
+        align-items: center;
+        float: left;
+        position: absolute;
+        left: 204%;
+        bottom: 5%;
+        border-radius: 10px 10px 10px 10px;
+        background-color: white;
+    }
+
+    #lad {
+        width: 28%;
+        height: 70%;
+        align-items: center;
+        float: left;
+        position: absolute;
+        left: 238%;
+        bottom: 5%;
+        border-radius: 10px 10px 10px 10px;
+        background-color: white;
+    }
+
+    #dell {
+        height: 35px;
+        width: 30%;
+        padding: 10px;
+        position: absolute;
+        text-align: center;
+        font-family: monospace;
+        font-size: 30px;
+        color: white;
+        left: 14%;
+        bottom: 85%;
+    }
+
+    #dell1 {
+        height: 35px;
+        width: 30%;
+        padding: 10px;
+        position: absolute;
+        text-align: center;
+        font-family: monospace;
+        font-size: 15px;
+        color: white;
+        left: 64%;
+        bottom: 84.5%;
+    }
+
+    #end {
+        height: 7%;
+        width: 5%;
+        padding: 10px;
+        position: absolute;
+        left: 12%;
+        bottom: 20.5%;
+    }
+
+    #legal {
+        float: left;
+        height: 10%;
+        width: 20%;
+        color: white;
+        position: absolute;
+        left: 22%;
+        bottom: 20%;
+    }
+
+    #india {
+        float: left;
+        height: 10%;
+        width: 20%;
+        color: white;
+        position: absolute;
+        left: 38%;
+        bottom: 20%;
+    }
+
+    #food {
+        float: left;
+        height: 10%;
+        width: 20%;
+        color: white;
+        position: absolute;
+        left: 52%;
+        bottom: 20%;
+    }
+
+    #support {
+        float: left;
+        height: 10%;
+        width: 20%;
+        color: white;
+        position: absolute;
+        left: 68%;
+        bottom: 20%;
+    }
+
+    #fb {
+        width: 4%;
+        height: 4%;
+        align-items: center;
+        float: left;
+        position: absolute;
+        left: 40%;
+        bottom: 5%;
+        border-radius: 40px 40px 40px 40px;
+    }
+
+    #insta{
+        width: 4%;
+        height: 4%;
+        align-items: center;
+        float: left;
+        position: absolute;
+        left: 48%;
+        bottom: 5%;
+        border-radius: 40px 40px 40px 40px;
+    }
+
+    #twit{
+        width: 4%;
+        height: 4%;
+        align-items: center;
+        float: left;
+        position: absolute;
+        left: 56%;
+        bottom: 5%;
+        border-radius: 40px 40px 40px 40px;
+    }
+
+    a:link {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div id="thin">
+        <img src="https://online.kfc.co.in/static/media/Search_Pin.e88a4d93.svg" id="logo">
+        Allow location access for local store menu and promos
+        <div id="location">Location</div>
+    </div>
+
+
+    <div id="kfc">
+        <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="KFC" id="klogo">
+        <div id="men"><b><a href="menu.html">Menu</a></b></div>
+        <div id="deals"><b>Deals</b></div>
+        <div id="aboutus"><b><a href="aboutus.html">About Us</a></b></div>
+        <div id="login">
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg" alt="login" id="sign">
+            <div id="dd">nn</div>
+            <div><b>Sign In</b></div>
+        </div>
+        <div id="vl"></div>
+        <div id="bucket">
+            <div><b>&#8377; 0</b></div>
+            <div id="dd">nn</div>
+        </div>
+    </div>
+
+
+    <br><br><br><br><br><br><br><br><br>
+
+
+    <div id="blac">
+        <b> LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</b>
+        <a href="menu.html"><div id="oder">Start Order</div></a>
+    </div>
+
+
+    <div class="container">
+        <img src="https://images.ctfassets.net/wtodlh47qxpt/3rG3DVKuArGcVVWvMJL0vL/6028fc17975a8c862c86fd67c0e54de5/web_1440x396px.jpg?w=1280&fit=fill&fm=webp" alt="offer" id="offer">
+        <div class="overlay">
+            <div class="overlay-content">
+                <p>Welcome to KfC</p>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br><br><br><br><br>
+
+
+    <div id="bro"><b>BROWSE CATEGORIES</b></div>
+    <div id="bb"></div>
+    <br><br><br><br><br><br>
+    <a href="menu.html#c1">
+    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT289.jpg?ver=52.96" alt="peri" id="peri">
+    </a>
+    <a href="menu.html#c2">
+    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT287.jpg?ver=52.96" alt="snak" id="snak">
+    </a>
+    <a href="menu.html#c3">
+    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT228.jpg?ver=52.96" alt="roll" id="roll">
+    </a>
+    <a href="menu.html#c4">
+    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT158.jpg?ver=52.96" alt="bucket" id="cbuck">
+    </a>
+    <a href="menu.html#c5">
+    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT99.jpg?ver=52.96" alt="bbuck" id="bbuck">
+    </a>
+    <a href="menu.html#c6">
+    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT86.jpg?ver=52.96" alt="meal" id="meal">
+    </a>
+    <a href="menu.html#c7">
+    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT213.jpg?ver=52.96" alt="burg" id="burg">
+    </a>
+    <a href="menu.html#c8">
+    <img src="https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg" alt="next" id="next">
+    </a>
+
+    <div id="fg">
+        <div id="box"></div>
+        <div id="box1"></div>
+        <div id="box2"></div>
+
+        <div id="dell"><b>OFFERS & DEALS</b></div>
+        <div id="dell1"><b>View All Deals&rarr;</b></div>
+
+        <div id="outer">
+            <div id="zinger">
+                <div id="zing1">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/ADDCHK99.jpg?ver=52.96" alt="zinger" id="zing1">
+                </div>
+                <div id="zing2"><b>FREE CHICKEN...</b></div>
+                <div id="zing3">
+                    <p>1 Pc free Chicken zinger on cart value of <br>
+                        499 or above on first order</p>
+                </div>
+                <div id="zing4">Apply</div>
+            </div>
+
+            <div id="upto">
+                <div id="zing1">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/BIGSAVE.jpg?ver=52.96" alt="zinger" id="zing1">
+                </div>
+                <div id="zing2"><b>ADD 2 PC HOT N...</b></div>
+                <div id="zing3">
+                    <p>1 Pc free Chicken zinger on cart value of <br>
+                        499 or above on first order</p>
+                </div>
+                <div id="zing4">Apply</div>
+            </div>
+
+            <div id="mac">
+                <div id="zing1">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/PHP75.jpg?ver=52.96" alt="zinger" id="zing1">
+                </div>
+                <div id="zing2"><b>UPTO RS 100 OFF...</b></div>
+                <div id="zing3">
+                    <p>1 Pc free Chicken zinger on cart value of <br>
+                        499 or above on first order</p>
+                </div>
+                <div id="zing4">Apply</div>
+            </div>
+
+            <div id="don">
+                <div id="zing1">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/YAYPOP.jpg?ver=52.96" alt="zinger" id="zing1">
+                </div>
+                <div id="zing2"><b>GET FLAT RS.75...</b></div>
+                <div id="zing3">
+                    <p>1 Pc free Chicken zinger on cart value of <br>
+                        499 or above on first order</p>
+                </div>
+                <div id="zing4">Apply</div>
+            </div>
+
+            <div id="prc">
+                <div id="zing1">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/YAYCHKN.jpg?ver=52.96" alt="zinger" id="zing1">
+                </div>
+                <div id="zing2"><b>FREE POPCORN...</b></div>
+                <div id="zing3">
+                    <p>1 Pc free Chicken zinger on cart value of <br>
+                        499 or above on first order</p>
+                </div>
+                <div id="zing4">Apply</div>
+            </div>
+
+            <div id="tme">
+                <div id="zing1">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/YAYSTRIPS.jpg?ver=52.96" alt="zinger" id="zing1">
+                </div>
+                <div id="zing2"><b>FREE 1PC...</b></div>
+                <div id="zing3">
+                    <p>1 Pc free Chicken zinger on cart value of <br>
+                        499 or above on first order</p>
+                </div>
+                <div id="zing4">Apply</div>
+            </div>
+
+            <div id="beig">
+                <div id="zing1">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/YAYVZINGER.jpg?ver=52.96" alt="zinger" id="zing1">
+                </div>
+                <div id="zing2"><b>FREE 3PC STRIPS...</b></div>
+                <div id="zing3">
+                    <p>1 Pc free Chicken zinger on cart value of <br>
+                        499 or above on first order</p>
+                </div>
+                <div id="zing4">Apply</div>
+            </div>
+
+            <div id="lad">
+                <div id="zing1">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/YAYFRIES.jpg?ver=52.96" alt="zinger" id="zing1">
+                </div>
+                <div id="zing2"><b>FREE VEG ZINGER</b></div>
+                <div id="zing3">
+                    <p>1 Pc free Chicken zinger on cart value of <br>
+                        499 or above on first order</p>
+                </div>
+                <div id="zing4">Apply</div>
+            </div>
+        </div>
+        <img src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg" alt="kfc" id="end">
+        <div id="legal">
+            <p>
+                <b>Legal</b> <br><br>
+                Terms and Conditions <br><br>
+                Privacy Policy <br><br>
+                Disclaimer <br><br>
+                Caution Notice
+            </p>
+        </div>
+        <div id="india">
+            <p>
+                <b>KFC India</b><br><br>
+                About KFC<br><br>
+                KFC Care<br><br>
+                Careers<br><br>
+                Our Golden Past
+            </p>
+        </div>
+        <div id="food">
+            <p>
+                <b>KFC Food</b><br><br>
+                Menu<br><br>
+                Order Lookup<br><br>
+                Gift Card<br><br>
+                Nutrition & Allergen
+            </p>
+        </div>
+        <div id="support">
+            <p>
+                <b>Support</b><br><br>
+                Get Help<br><br>
+                Contact Us<br><br>
+                KFC Feedback<br><br>
+                Privacy Policy<br><br>
+            </p>
+        </div>
+        <a href="https://www.facebook.com/profile.php?id=61557291144871"><img src="https://images.ctfassets.net/wtodlh47qxpt/dKiu2meLcfz2DNwsg7nZw/7194830b1ba6f25b158a23d6b2c4752c/Social_Facebook_White.svg" alt="fb" id="fb"></a>
+        <a href="https://www.instagram.com/lakshay_ksn79?igsh=ZjU3MTE4Ynd3bnZp"><img src="https://images.ctfassets.net/wtodlh47qxpt/4ZHyPA2EeaoP3aqtNDriBA/463462a9c27b0aa585e12b21ce3766e0/Social_Insta_White.svg" alt="inst" id="insta"></a>
+        <a href="https://x.com/AnmolSaxena45?t=iwPA9lMsgvx52ZC4BRD5cQ&s=09"><img src="https://images.ctfassets.net/wtodlh47qxpt/78z9x0WwdkdXwGVK726EKX/6599ca34ec88e2a6f46d7d94ed85a8ad/Social_Twitter_White.svg" alt="twit" id="twit"></a>
+
+    </div>
+</body>
+</html>

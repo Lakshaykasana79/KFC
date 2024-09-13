@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+</head>
+<style>
+    body {
+        margin: 0%;
+        padding: 0%;
+        scroll-behavior: smooth;
+    }
+
+    #kfc {
+        height: 10.7%;
+        width: 100%;
+        padding: 20px;
+        background-color: rgb(242, 240, 240);
+        border-bottom-width: thin;
+        text-align: center;
+        align-items: center;
+        position: fixed;
+        z-index: 1000;
+        display: inline-block;
+    }
+
+    #klogo {
+        height: 100%;
+        width: 14%;
+        align-items: center;
+        position: absolute;
+        left: 10%;
+        bottom: 0%;
+    }
+
+    #menu {
+        height: 17%;
+        width: 14%;
+        align-items: center;
+        position: absolute;
+        left: 20%;
+        bottom: 44%;
+        color: black;
+    }
+
+    #deals {
+        height: 17%;
+        width: 4%;
+        align-items: center;
+        position: absolute;
+        left: 30.5%;
+        bottom: 44%;
+    }
+
+    #aboutus{
+        height: 17%;
+        width: 14%;
+        align-items: center;
+        position: absolute;
+        left: 32%;
+        bottom: 44%;
+        color: black;
+    }
+
+    #login {
+        height: 17%;
+        width: 14%;
+        align-items: center;
+        position: absolute;
+        display: flex;
+        left: 76%;
+        bottom: 44%;
+    }
+
+    #sign {
+        height: 130%;
+        width: 14%;
+        align-items: center;
+        left: 26%;
+        bottom: 66%;
+    }
+
+    #dd {
+        color: rgb(242, 240, 240);
+    }
+
+    #vl {
+        border-left: 2px solid black;
+        height: 25%;
+        position: absolute;
+        left: 84%;
+        bottom: 39.5%;
+    }
+
+    #bucket {
+        height: 17%;
+        width: 14%;
+        align-items: center;
+        position: absolute;
+        display: flex;
+        left: 85%;
+        bottom: 44%;
+    }
+
+    #log {
+        height: 21%;
+        width: 14%;
+        align-items: center;
+        left: 26%;
+        bottom: 56%;
+    }
+
+    #blac {
+        height: 3%;
+        width: 97%;
+        margin: auto;
+        padding: 20px;
+        background-color: black;
+        color: aliceblue;
+        text-align: center;
+        align-items: center;
+        position: absolute;
+        bottom: 73.4%;
+    }
+
+    #oder {
+        height: 20px;
+        width: 8%;
+        padding: 10px;
+        border-radius: 50px 50px 50px 50px;
+        background-color: rgb(214, 21, 21);
+        color: aliceblue;
+        text-align: center;
+        position: absolute;
+        right: 23%;
+        top: 15.5%;
+    }
+
+    #meemu {
+        height: 79.6%;
+        width: 25%;
+        padding: 10px;
+        position: fixed;
+        left: 0%;
+        background-color: white;
+        bottom: 0%;
+    }
+
+    #kf {
+        font-family: monospace;
+        font-size: 50px;
+        background-color: transparent;
+        position: absolute;
+        left: 13%;
+        top: 5%;
+    }
+
+    #m1 {
+        font-size: 20px;
+        background-color: transparent;
+        color: black;
+        position: absolute;
+        left: 19%;
+        bottom: 70%;
+        animation: moveBookmark 3s infinite alternate;
+    }
+
+    #m2 {
+        font-size: 20px;
+        background-color: transparent;
+        position: absolute;
+        left: 19%;
+        bottom: 61%;
+    }
+
+    #m3 {
+        font-size: 20px;
+        background-color: transparent;
+        position: absolute;
+        left: 19%;
+        bottom: 52%;
+    }
+
+    #m4 {
+        font-size: 20px;
+        background-color: transparent;
+        position: absolute;
+        left: 19%;
+        bottom: 43%;
+    }
+
+    #m5 {
+        font-size: 20px;
+        background-color: transparent;
+        position: absolute;
+        left: 19%;
+        bottom: 34%;
+    }
+
+    #m6 {
+        font-size: 20px;
+        background-color: transparent;
+        position: absolute;
+        left: 19%;
+        bottom: 25%;
+    }
+
+    #m7 {
+        font-size: 20px;
+        background-color: transparent;
+        position: absolute;
+        left: 19%;
+        bottom: 16%;
+    }
+
+    #m8 {
+        font-size: 20px;
+        background-color: transparent;
+        position: absolute;
+        left: 19%;
+        bottom: 12%;
+    }
+
+    #bb {
+        border-bottom: 2px solid black;
+        width: 69%;
+        background-color: white;
+        position: absolute;
+        left: 28%;
+        bottom: 58.8%;
+        display: block;
+    }
+
+    input[type=text] {
+        border-color: gray;
+        border-style: solid;
+        border-width: thin;
+        float: left;
+        height: 2.5%;
+        width: 10%;
+        position: absolute;
+        left: 29%;
+        bottom: 62.5%;
+        text-align: left;
+        color: black;
+        padding: 8px;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    #peri {
+        float: right;
+        width: 65%;
+        height: 210%;
+        background-color: rgb(198, 198, 198);
+        position: absolute;
+        bottom: -155%;
+        right: 5%;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    #zinger {
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        left: 5%;
+        bottom: 49%;
+        background-color: transparent;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0px 0px 2px 2px grey;
+    }
+
+    #zing1 {
+        width: 100%;
+        height: 70%;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    #zing2 {
+        width: 100%;
+        color: black;
+        background-color: transparent;
+        position: absolute;
+        text-align: left;
+        top: 55%;
+        left: 3%;
+    }
+
+    #zing3 {
+        width: 90%;
+        color: black;
+        background-color: transparent;
+        position: absolute;
+        text-align: left;
+        left: 3%;
+        bottom: 21%;
+    }
+
+    #zing4 {
+        height: 3.1%;
+        width: 35.5%;
+        position: absolute;
+        left: 3%;
+        bottom: 11.5%;
+        text-align: center;
+        color: black;
+        background-color: rgb(214, 21, 21);
+        padding: 9px;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    #zing4:hover {
+        background-color: black;
+        color: white;
+    }
+
+    #peri2 {
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        right: 5%;
+        bottom: 49%;
+        background-color: transparent;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0px 0px 2px 2px grey;
+    }
+
+    #peri3 {
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        left: 5%;
+        bottom: 4%;
+        background-color: transparent;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0px 0px 2px 2px grey;
+    }
+
+    #snak {
+        float: right;
+        width: 65%;
+        height: 210%;
+        background-color: transparent;
+        position: absolute;
+        bottom: -370%;
+        right: 5%;
+    }
+
+    #roll {
+        float: right;
+        width: 65%;
+        height: 210%;
+        background-color: transparent;
+        position: absolute;
+        bottom: -585%;
+        right: 5%;
+    }
+
+    #cbuck {
+        float: right;
+        width: 65%;
+        height: 210%;
+        background-color: transparent;
+        position: absolute;
+        bottom: -800%;
+        right: 5%;
+    }
+
+    #bbuck {
+        float: right;
+        width: 65%;
+        height: 210%;
+        background-color: transparent;
+        position: absolute;
+        bottom: -1015%;
+        right: 5%;
+    }
+
+    #meal {
+        float: right;
+        width: 65%;
+        height: 210%;
+        background-color: transparent;
+        position: absolute;
+        bottom: -1230%;
+        right: 5%;
+    }
+
+    #burg {
+        float: right;
+        width: 65%;
+        height: 210%;
+        background-color: transparent;
+        position: absolute;
+        bottom: -1445%;
+        right: 5%;
+    }
+
+    #pepsi {
+        float: right;
+        width: 65%;
+        height: 210%;
+        background-color: transparent;
+        position: absolute;
+        bottom: -1660%;
+        right: 5%;
+    }
+
+    #bro {
+        height: 35px;
+        width: 50%;
+        padding: 10px;
+        position: absolute;
+        text-align: left;
+        font-family: monospace;
+        font-size: 30px;
+        top: 1%;
+        left: 4%;
+    }
+
+    a:link {
+        color: rgb(214, 21, 21);
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: rgb(214, 21, 21);
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: rgb(214, 21, 21);
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: rgb(54, 55, 56);
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    #p1 {
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        left: 5%;
+        bottom: 49%;
+        background-color: transparent;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    #p2 {
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        right: 5%;
+        bottom: 49%;
+        background-color: transparent;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    #p3 {
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        left: 5%;
+        bottom: 4%;
+        background-color: transparent;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+</style>
+
+<body>
+    <div id="kfc">
+        <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="KFC" id="klogo">
+        <div id="menu"><b><a href="file:///Users/lakshaykasana/Desktop/HTML/menu.html">Menu</a></b></div>
+        <div id="deals"><b>Deals</b></div>
+        <div id="aboutus"><b><a href="aboutus.html">About Us</a></b></div>
+        <div id="login">
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg" alt="login" id="sign">
+            <div id="dd">nn</div>
+            <div><b>Sign In</b></div>
+        </div>
+        <div id="vl"></div>
+        <div id="bucket">
+            <div><b>&#8377; 0</b></div>
+            <div id="dd">nn</div>
+        </div>
+    </div>
+
+    <div id="blac">
+        <b> LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</b>
+        <div id="oder">Start Order</div>
+    </div>
+
+    <div id="meemu">
+        <div id="kf">
+            <b>KFC MENU</b>
+        </div>
+        <div id="m1">
+            <a href="#c1">
+                PERI PERI CHICKEN</a><br><br>
+        </div>
+        <div id="m2">
+            <a href="#c2">
+                VALUE SNACKERS</a><br><br>
+        </div>
+        <div id="m3">
+            <a href="#c3">
+                CHICKEN ROLLS</a><br><br>
+        </div>
+        <div id="m4">
+            <a href="#c4">
+                CHICKEN BUCKETS</a><br><br>
+        </div>
+        <div id="m5">
+            <a href="#c5">
+                BIRYANI BUCKETS</a><br><br>
+        </div>
+        <div id="m6">
+            <a href="#c6">
+                BOX MEALS</a><br><br>
+        </div>
+        <div id="m7">
+            <a href="#c7">
+                BURGERS</a><br><br>
+        </div>
+        <div id="m8">
+            <a href="#c8">
+                BEVERAGES</a>
+        </div>
+    </div>
+
+    <input type="text" placeholder="Search...">
+
+    <div id="bb"></div>
+
+    <div id="peri">
+
+        <div id="bro"><b>
+                <h3 id="c1">PERI PERI CHICKEN</h2>
+            </b></div>
+        <div id="p1">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K815.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>5 Leg Pc & 2 Dips Bucket</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹519.05</b><br>
+                    Save Rs. 120 on 5 Peri Peri Leg Pieces, paired with 2 delicious dips (20gm each)</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="p2">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002413.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Peri Peri 10 Leg Pc & 4 Dips</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹948.57</b><br>
+                    Save Rs. 334 on 10 Peri Peri Leg Pieces & 4 Dips (20 gm each)</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="p3">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002412.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Peri Peri 10 Pc Chicken Strips & 2 Dips</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹499.05</b><br>
+                    Save 24% on 10 Spicy Peri Peri chicken boneless strips with 2 Dips</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+    </div>
+
+    <div id="snak">
+        <div id="bro"><b>
+                <h3 id="c2">VALUE SNACKERS</h3>
+            </b></div>
+        <div id="zinger">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K617.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>2 Veg Longer Burger</b><br>
+                Veg</div>
+            <div id="zing3">
+                <p><b>₹198.10</b><br>
+                    The really long burger with Veg Patty, Onion, Lettuce and two sauces</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri2">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002348.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Single Chicken Roll</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹119.05</b><br>
+                    Street style roll with single chicken strip, onions and two spicy sauce</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri3">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K136.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Chocolate Lava Cake</b><br>
+                Veg</div>
+            <div id="zing3">
+                <p><b>₹108.57</b><br>
+                    Soft Chocolate cake with a gooey center- perfect chocolaty end to every meal</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+    </div>
+
+    <div id="roll">
+        <div id="bro"><b>
+                <h3 id="c3">CHICKEN ROLLS</h3>
+            </b></div>
+        <div id="zinger">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002324.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Classic Chicken Roll & Pepsi Combo</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹176.19</b><br>
+                    Our new Classic Chicken Roll served with Pepsi 475ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri2">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002325.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Double Chicken Roll & Pepsi Combo</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹225.71</b><br>
+                    Our new Double Chicken Roll served with Pepsi 475ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri3">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002070.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Classic Chicken Roll Meal for 1</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹339.05</b><br>
+                    Deal combo of 1 Classic Chicken Roll, Large Fries, 2 Dips & Pepsi 475ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+    </div>
+
+    <div id="cbuck">
+        <div id="bro"><b>
+                <h3 id="c4">CHICKEN BUCKETS</h3>
+            </b></div>
+        <div id="zinger">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002340.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>The Allu Arjun Combo</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹448.57</b><br>
+                    Try Allus fav-1 Hot & Crispy Chicken,1 Smoky Red, Reg Popcorn, Spicy Fries & 1 Dip 20gm</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri2">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00000892.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>All in One Bucket</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹548.57</b><br>
+                    1 Leg, 1 Hot & Crispy, 2 Wings, 2 Strips, 1 Zinger Fillet, 3 Dips [20gm each] & 1 Pepsi 475 ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri3">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002169.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Bucket for Two</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹599.05</b><br>
+                    Flat Rs. 115 off on combo of 2pc Hot & Crispy, 2 pc Smoky Red Chicken & Large Popcorn</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+    </div>
+
+    <div id="bbuck">
+        <div id="bro"><b>
+                <h3 id="c5">BIRYANI BUCKETS</h3>
+            </b></div>
+        <div id="zinger">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002503.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Classic Biryani Combo</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹740.00</b><br>
+                    Large Biryani rice with 2 Hot & Crispy, 2 Gravies, 4 Strips & 1 Pepsi 475ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri2">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002155.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Smoky Grilled Biryani Combo</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹740.00</b><br>
+                    Large Biryani rice with 2 Smoky Red, 2 Gravies, Med Popcorn & 1 Pepsi 475ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri3">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00000854.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Popcorn Biryani Combo</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹690.48</b><br>
+                    Large Biryani & Chicken Popcorn, 2 Spicy Gravies, 4 Wings & 1 Pepsi 475ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+    </div>
+
+    <div id="meal">
+        <div id="bro"><b>
+                <h3 id="c6">BOX MEALS</h3>
+            </b></div>
+        <div id="zinger">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002167.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>All Chicken Box</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹189.52</b><br>
+                    A Box with your favorites! Get 1 pc Hot & Crispy, 2 Hot Wings & 1 Chicken Strip at a deal price</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri2">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00001003.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Zinger Tandoori Box</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹313.33</b><br>
+                    A deal for Tandoori lovers : Get 1 Tandoori Zinger, 2 Hot Wings, 1 Veg Patty & 1 Pepsi 475ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri3">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00001004.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Popcorn Biryani Box</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹328.57</b><br>
+                    Biryani lovers unite : Get 1 Popcorn Biryani Bucket with gravy, 2 Hot Wings & 1 Pepsi 475ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+    </div>
+
+    <div id="burg">
+        <div id="bro"><b>
+                <h3 id="c7">BURGERS</h3>
+            </b></div>
+        <div id="zinger">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K696.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Family Feast</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹859.05</b><br>
+                    Family Deal of 3 chicken zingers, med popcorn, med fries & 1 Pepsi 475ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri2">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K912.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>2 Chicken Krisper Burgers</b><br>
+                Non veg.Serves 2</div>
+            <div id="zing3">
+                <p><b>₹248.57</b><br>
+                    2 delicious chicken value burgers - at a deal price</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri3">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002412.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>2 Veg Krisper Burgers</b><br>
+                Veg</div>
+            <div id="zing3">
+                <p><b>₹179.05</b><br>
+                    2 delicious veg value burgers - at a deal price</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+    </div>
+
+    <div id="pepsi">
+        <div id="bro"><b>
+                <h3 id="c8">BEVERAGES</h3>
+            </b></div>
+        <div id="zinger">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K350.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Pepsi 475ml PET</b><br>
+                Veg</div>
+            <div id="zing3">
+                <p><b>₹57.14</b><br>
+                    Pepsi 475ml PET</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri2">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K485.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>Pepsi Can 300 ml</b><br>
+                Veg</div>
+            <div id="zing3">
+                <p><b>₹57.14</b><br>
+                    Pepsi Can 300 ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+
+        <div id="peri3">
+            <div id="zing1">
+                <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K487.jpg?ver=52.96" alt="zinger" id="zing1">
+            </div><br>
+            <div id="zing2"><b>7UP Can 300 ml</b><br>
+                Veg</div>
+            <div id="zing3">
+                <p><b>₹57.14</b><br>
+                    7UP Can 300 ml</p>
+            </div>
+            <div id="zing4">Order</div>
+        </div>
+    </div>
+</body>
+
+</html>
